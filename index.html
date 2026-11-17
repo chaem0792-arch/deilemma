@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>인공지능 윤리 딜레마</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+<style>
+:root {
+  --green: #2f7d57;
+  --green-dark: #457b5a;
+  --green-ink: #286448;
+  --green-tint: #e3efe8;
+  --line: #c9d6ce;
+  --ink: #222a26;
+  --muted: #5d6862;
+  --desk: #e6ebe8;
+  --paper: #ffffff;
+  --focus: #e9a23b;
+  --font: "Noto Sans KR", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--desk); color: var(--ink); font-family: var(--font); -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
+
+.bar { background: var(--green-ink); color: #fff; padding: 12px 16px; }
+.bar-in { max-width: 794px; margin: 0 auto; font-weight: 700; font-size: 15px; }
+
+.desk { flex: 1; padding: 32px 16px 60px; display: flex; justify-content: center; align-items: flex-start; }
+.paper { width: 100%; max-width: 794px; background: var(--paper); box-shadow: 0 2px 10px rgba(30,60,45,.12); padding: 40px 44px 48px; border-radius: 4px; }
+
+.banner { background: var(--green-dark); color: #fff; border-radius: 10px; padding: 14px 18px 20px; }
+.banner .school { font-size: 12px; font-weight: 700; }
+.banner h1 { margin: 6px 0 0; text-align: center; font-size: 24px; font-weight: 700; text-wrap: balance; }
+.banner p { margin: 6px 0 0; text-align: center; font-size: 14px; opacity: .9; }
+
+.lead { margin: 26px 0 18px; font-size: 15px; color: var(--muted); line-height: 1.6; text-align: center; }
+
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.card { display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 10px; padding: 22px 22px 20px; background: #fff;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(30,60,45,.14); border-color: var(--green); }
+.card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.tag { align-self: flex-start; background: var(--green); color: #fff; font-size: 13px; font-weight: 700; border-radius: 999px; padding: 4px 12px; }
+.card h2 { margin: 4px 0 0; font-size: 19px; color: var(--green-ink); }
+.card p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.6; flex: 1; }
+.go { margin-top: 10px; background: var(--green-ink); color: #fff; font-weight: 700; font-size: 15px; text-align: center; border-radius: 6px; padding: 11px 14px; }
+.card:hover .go { background: var(--green); }
+
+.foot { margin-top: 26px; font-size: 12px; color: #9aa39e; text-align: center; }
+
+@media (max-width: 600px) {
+  .paper { padding: 24px 18px 32px; }
+  .banner h1 { font-size: 20px; }
+  .choices { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">인공지능 윤리적 딜레마 토의</div></header>
+
+<main class="desk">
+  <section class="paper">
+    <div class="banner">
+      <div class="school">중앙여자고등학교 2026 인공지능기초</div>
+      <h1>인공지능 윤리적 딜레마에 관해 고찰하기</h1>
+      <p>수행평가 활동지</p>
+    </div>
+
+    <p class="lead">오늘 수업 차시를 골라 활동지를 열어 주세요.<br>작성 내용은 이 기기에 자동 저장되고, 다 쓰면 PDF로 저장할 수 있어요.</p>
+
+    <nav class="choices" aria-label="차시 선택">
+      <a class="card" href="./pages/dilemma_1.html">
+        <span class="tag">1차시</span>
+        <h2>사례 선정과 딜레마 분석</h2>
+        <p>인공지능 활용 사례를 고르고, 윤리적 딜레마 상황을 정의한 뒤 윤리 관점으로 분석합니다.</p>
+        <span class="go">1차시 활동지 열기 →</span>
+      </a>
+      <a class="card" href="./pages/dilemma_2.html">
+        <span class="tag">2차시</span>
+        <h2>공존 규약 수립과 동료 평가</h2>
+        <p>인간과 AI의 공존을 위한 규약을 세우고, 모둠 토의와 동료 평가, 자기 점검으로 마무리합니다.</p>
+        <span class="go">2차시 활동지 열기 →</span>
+      </a>
+    </nav>
+
+    <div class="foot">인공지능 윤리 딜레마 · 2026</div>
+  </section>
+</main>
+</body>
+</html>
